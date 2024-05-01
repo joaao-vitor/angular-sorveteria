@@ -1,0 +1,32 @@
+<main class="panel-products-container">
+    <div class="header">
+        <h1 class="title">
+            <mat-icon>icecream</mat-icon>
+            Seus produtos:
+        </h1>
+
+        <button mat-flat-button routerLink="/add-product">
+            <mat-icon>add</mat-icon> ADICIONAR PRODUTO
+        </button>
+    </div>
+    <section>
+        <mat-form-field appearance="outline" class="filter-input">
+            <mat-label>Filtrar</mat-label>
+            <input
+                matInput
+                (keyup)="applyFilter($event)"
+                placeholder="Ex. ium"
+            />
+        </mat-form-field>
+        <div class="products-grid">
+            @for (product of shownProducts; track product.id) {
+            <app-product-card-admin
+                [product]="product"
+                (deleteEvent)="deleteProduct($event)"
+            ></app-product-card-admin
+            >} @empty {
+            <h1>Nenhum produto disponível!</h1>
+            }
+        </div>
+    </section>
+</main>

@@ -1,0 +1,51 @@
+.cartbar-inside {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+}
+.header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    span {
+        font-weight: 500;
+        font-size: 15px;
+        color: rgb(35, 35, 46);
+    }
+}
+.products {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+mat-divider {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+.title {
+    display: flex;
+    gap: 1rem;
+    opacity: 0.7;
+    font-weight: 700;
+    align-items: center;
+    justify-content: center;
+}
+.empty-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.3;
+    height: 100%;
+    margin-top: 6rem;
+    h1 {
+        font-weight: 600;
+    }
+}
+.actions {
+    align-self: flex-end;
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}

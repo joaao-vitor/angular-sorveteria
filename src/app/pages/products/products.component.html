@@ -1,0 +1,18 @@
+<main class="products-container">
+    <div>
+        <mat-form-field appearance="outline" class="filter-input">
+            <mat-label>Filtrar</mat-label>
+            <input
+                matInput
+                (keyup)="applyFilter($event)"
+                placeholder="Ex. ium"
+            />
+            <mat-icon matPrefix>filter_list</mat-icon>
+        </mat-form-field>
+    </div>
+    <section class="products">
+        @for (product of shownProducts; track product.id) {
+        <app-product-card [product]="product"></app-product-card>
+        }
+    </section>
+</main>

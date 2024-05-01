@@ -1,0 +1,32 @@
+<section class="products-section" id="products">
+    <h1 class="title">NOSSOS PRODUTOS</h1>
+    <button mat-flat-button class="btn-all-products" routerLink="/products">TODOS OS PRODUTOS</button>
+    <div class="carousel-container">
+        <ngx-slick-carousel
+            class="carousel"
+            #slickModal="slick-carousel"
+            [config]="slideConfig"
+        >
+            @for (product of products; track product.id) {
+            <div ngxSlickItem class="slide">
+                <app-product-card [product]="product"></app-product-card>
+            </div>
+            }
+        </ngx-slick-carousel>
+
+        <button
+            mat-icon-button
+            (click)="slickModal.slickNext()"
+            class="carousel-btn btn-next"
+        >
+            <mat-icon>navigate_next</mat-icon>
+        </button>
+        <button
+            mat-icon-button
+            (click)="slickModal.slickPrev()"
+            class="carousel-btn btn-prev"
+        >
+            <mat-icon>navigate_before</mat-icon>
+        </button>
+    </div>
+</section>

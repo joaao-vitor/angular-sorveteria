@@ -1,0 +1,31 @@
+<div class="cartbar-inside">
+    <div class="header" (click)="close()">
+        <button mat-icon-button><mat-icon>arrow_back</mat-icon></button>
+        <span>Sair do carrinho</span>
+    </div>
+    <mat-divider></mat-divider>
+    <h1 class="title">
+        <mat-icon>shopping_cart</mat-icon>
+        Carrinho
+    </h1>
+    <section class="products">
+        @for (productCart of products; track productCart.id) {
+        <app-product-card-cart
+            [productCart]="productCart"
+            (refreshProducts)="refresh()"
+        ></app-product-card-cart>
+        } @empty {
+        <div class="empty-card">
+            <mat-icon>money_off</mat-icon>
+            <h1>Ooops! O carrinho está vazio</h1>
+        </div>
+        }
+    </section>
+
+    @if (products.length > 0) {
+    <div class="actions">
+        <button mat-flat-button (click)="clearCart()">cancelar</button>
+        <button mat-flat-button color="primary">comprar</button>
+    </div>
+    }
+</div>

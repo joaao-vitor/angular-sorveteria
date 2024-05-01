@@ -1,0 +1,58 @@
+@import "variables";
+.add-product-container {
+    background-color: white;
+    padding-top: 7rem !important;
+    @media (max-width: 600px) {
+        padding: $smartphone-padding;
+        padding-top: 1rem !important;
+        margin-top: 4rem;
+    }
+    @media (min-width: 600px) {
+        padding: $tablet-padding;
+    }
+    @media (min-width: 900px) {
+        padding: $desktop-padding;
+    }
+}
+.header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    span {
+        font-weight: 500;
+        font-size: 15px;
+        color: rgb(35, 35, 46);
+    }
+}
+mat-form-field {
+    width: 100%;
+}
+mat-divider {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    opacity: 0.8;
+    gap: 1rem;
+    font-weight: 700;
+}
+.subtitle {
+    font-weight: 600;
+    opacity: 0.7;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+.inline-form-group {
+    display: flex;
+    gap: 2rem;
+}
+.btn-group {
+    display: flex;
+    justify-content: flex-end;
+    display: flex;
+    gap: 1rem;
+}

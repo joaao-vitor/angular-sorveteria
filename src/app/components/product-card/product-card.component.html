@@ -1,0 +1,14 @@
+<mat-card class="product-card">
+    <img mat-card-image [src]="product.img" class="product-img" alt="" />
+    <mat-card-content class="card-content">
+        <div>
+            <h3 class="product-title">{{product.title}}</h3>
+            <span class="product-weight">{{product.weight}} {{product.measurementUnit}}</span>
+        </div>
+        <div>
+            <button mat-icon-button (click)="openDialog()">
+                <mat-icon>add</mat-icon>
+            </button>
+        </div>
+    </mat-card-content>
+</mat-card>

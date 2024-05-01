@@ -1,0 +1,29 @@
+<mat-card class="product-card">
+    <mat-card-content class="card-content">
+        <img mat-card-image [src]="product.img" class="product-img" alt="" />
+        <div class="card-container">
+            <div>
+                <h3 class="product-title">{{ product.title }}</h3>
+                <span class="product-weight"
+                    >{{ product.weight }} {{ product.measurementUnit }}</span
+                >
+            </div>
+            <div class="card-actions">
+                <button
+                    mat-icon-button
+                    class="edit-btn"
+                    routerLink="/add-product/{{ product.id }}"
+                >
+                    <mat-icon>edit</mat-icon>
+                </button>
+                <button
+                    mat-icon-button
+                    class="delete-btn"
+                    (click)="deleteProduct()"
+                >
+                    <mat-icon>delete</mat-icon>
+                </button>
+            </div>
+        </div>
+    </mat-card-content>
+</mat-card>

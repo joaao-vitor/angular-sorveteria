@@ -1,0 +1,60 @@
+<mat-card>
+    <mat-card-header>
+        <mat-card-title-group>
+            <div class="title-group">
+                <img
+                    mat-card-sm-image
+                    [src]="productCart.product.img"
+                />
+                <div>
+                    <mat-card-title>{{
+                        productCart.product.title
+                    }}</mat-card-title>
+                    <mat-card-subtitle
+                        >{{ productCart.product.weight
+                        }}{{
+                            productCart.product.measurementUnit
+                        }}</mat-card-subtitle
+                    >
+                </div>
+            </div>
+        </mat-card-title-group>
+    </mat-card-header>
+    <mat-card-content class="card-content">
+        <div class="grid-flavors">
+            <div>
+                <section class="flavors-aditionals">
+                    <h4>Sabores:</h4>
+                    <p>
+                        {{ productCart.pickedFlavors.join(", ") }}
+                    </p>
+                </section>
+                @if (productCart.pickedAditionals.length > 0) {
+                <section class="flavors-aditionals">
+                    <h4>Adicionais:</h4>
+                    <p>
+                        {{ productCart.pickedFlavors.join(", ") }}
+                    </p>
+                </section>
+                }
+            </div>
+            <section class="actions-card">
+                <button mat-icon-button (click)="increase(productCart)">
+                    <mat-icon>add</mat-icon>
+                </button>
+                <span>{{ productCart.quantity }}</span>
+                <button
+                    mat-icon-button
+                    color="warn"
+                    (click)="decrease(productCart)"
+                >
+                    @if (productCart.quantity === 1) {
+                    <mat-icon>delete</mat-icon>
+                    } @else {
+                    <mat-icon>remove</mat-icon>
+                    }
+                </button>
+            </section>
+        </div>
+    </mat-card-content>
+</mat-card>

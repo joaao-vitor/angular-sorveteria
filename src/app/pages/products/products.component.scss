@@ -1,0 +1,26 @@
+@import "variables";
+.products-container {
+    background-color: white;
+    padding-top: 7rem !important;
+    @media (max-width: 600px) {
+        padding: $smartphone-padding;
+    }
+    @media (min-width: 600px) {
+        padding: $tablet-padding;
+    }
+    @media (min-width: 900px) {
+        padding: $desktop-padding;
+    }
+}
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 1rem;
+    @media (max-width: 600px) {
+        display: flex;
+        flex-direction: column;
+    }
+}
+.filter-input{
+    width: 100%;
+}

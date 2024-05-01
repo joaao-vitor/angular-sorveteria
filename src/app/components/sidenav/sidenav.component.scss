@@ -1,0 +1,33 @@
+@import "variables";
+
+.sidenav-inside {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.nav-list {
+    padding-top: 6rem;
+    @media (max-width: 600px) {
+        padding-left: $smartphone-padding;
+        padding-right: $smartphone-padding;
+    }
+    @media (min-width: 600px) {
+        padding-left: $tablet-padding-side;
+        padding-right: $tablet-padding-side;
+    }
+    @media (min-width: 900px) {
+        padding-left: $desktop-padding;
+        padding-right: $desktop-padding;
+    }
+}
+.nav-list mat-list-item {
+    margin-top: 5px;
+}
+.nav-list > * {
+    font-size: 30px;
+}
+.bottom-nav-list {
+    justify-self: flex-end;
+}

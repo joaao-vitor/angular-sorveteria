@@ -1,0 +1,64 @@
+<h2 mat-dialog-title class="dialog-header">
+    {{ product.title }}
+    <span class="subtitle"
+        >{{ product.weight }} {{ product.measurementUnit }}</span
+    >
+</h2>
+<img [src]="product.img" alt="" class="product-img" />
+<mat-dialog-content class="mat-typography product-dialog">
+    <div>
+        <mat-accordion multi>
+            <mat-expansion-panel [expanded]="true">
+                <mat-expansion-panel-header>
+                    <mat-panel-title> Sabores </mat-panel-title>
+                    <mat-panel-description>
+                        Max. {{product.maxFlavors}}
+                      </mat-panel-description>
+                </mat-expansion-panel-header>
+
+                <section [formGroup]="flavors">
+                    @for (flavor of product.flavors; track flavor) {
+                    <p>
+                        <mat-checkbox
+                            [formControlName]="flavor"
+                            (click)="handleFlavorClick($event, flavor)"
+                            >{{ flavor }}</mat-checkbox
+                        >
+                    </p>
+                    }
+                </section>
+            </mat-expansion-panel>
+        </mat-accordion>
+        
+    </div>
+    <div>
+        <mat-accordion multi>
+            <mat-expansion-panel>
+                <mat-expansion-panel-header>
+                    <mat-panel-title> Adicionais </mat-panel-title>
+                    <mat-panel-description>
+                        Max. {{product.maxAditionals}}
+                      </mat-panel-description>
+                </mat-expansion-panel-header>
+
+                <section [formGroup]="aditionals">
+                    @for (aditional of product.aditionals; track aditional) {
+                    <p>
+                        <mat-checkbox
+                            [formControlName]="aditional"
+                            (click)="handleAditionalClick($event, aditional)"
+                            >{{ aditional }}</mat-checkbox
+                        >
+                    </p>
+                    }
+                </section>
+            </mat-expansion-panel>
+        </mat-accordion>
+    </div>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+    <button mat-button mat-dialog-close>Cancelar</button>
+    <button (click)="handleAddCart()" color="primary" mat-button cdkFocusInitial>
+        Adicionar ao carrinho
+    </button>
+</mat-dialog-actions>

@@ -1,0 +1,54 @@
+@import "variables";
+.panel-products-container {
+    background-color: white;
+    padding-top: 7rem !important;
+    @media (max-width: 600px) {
+        padding: $smartphone-padding;
+    }
+    @media (min-width: 600px) {
+        padding: $tablet-padding;
+    }
+    @media (min-width: 900px) {
+        padding: $desktop-padding;
+    }
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @media (min-width: 900px) {
+        margin-top: 3rem;
+    }
+    @media (max-width: 900px) {
+        flex-direction: column;
+        align-items: flex-start;
+        button {
+            align-self: flex-end;
+            margin-bottom: 1rem;
+        }
+    }
+}
+.title {
+    display: flex;
+    align-items: center;
+    opacity: 0.8;
+    gap: 1rem;
+    font-weight: 700;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+
+    @media (max-width: 1024px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: 600px) {
+        grid-template-columns: 1fr;
+    }
+}
+.filter-input {
+    width: 100%;
+}

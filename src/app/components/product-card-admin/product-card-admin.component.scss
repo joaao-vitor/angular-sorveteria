@@ -1,0 +1,45 @@
+.product-card {
+    .card-content {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        padding: 1rem;
+        @media (max-width: 400px) {
+            flex-direction: column;
+        }
+    }
+}
+.product-title {
+    font-family: "Inter";
+    font-weight: 600;
+    font-size: 16px;
+    margin: 0;
+}
+.product-weight {
+    font-family: "Inter";
+    font-weight: 400;
+    font-size: 16px;
+    opacity: 0.57;
+}
+.product-img {
+    max-width: 100px;
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+    object-position: center;
+}
+.delete-btn,
+.edit-btn {
+    transition: all 0.3s;
+}
+.edit-btn:hover {
+    color: rgb(255, 153, 0);
+}
+.delete-btn:hover {
+    color: rgb(212, 0, 0);
+}
+.card-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}

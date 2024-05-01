@@ -1,0 +1,62 @@
+@import 'variables';
+
+.menu-header {
+    position: absolute;
+    background: none;
+    padding: $desktop-padding;
+    display: flex;
+    justify-content: space-between;
+    z-index: 10;
+
+    @media (max-width: 600px) {
+        padding: $smartphone-padding;
+    }
+    @media (min-width: 600px) {
+        padding: $tablet-padding;
+    }
+    @media (min-width: 900px) {
+        padding: $desktop-padding;
+    }
+
+    menu {
+        display: flex;
+        align-items: center;
+        gap: 4rem;
+        list-style: none;
+        font-family: 'Inter';
+        font-weight: 500;
+        font-size: 20px;
+        @media (max-width: 900px) {
+            display: none;
+        }
+    }
+}
+.menu-toggle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    z-index: 10;
+    padding: 5px;
+}
+
+.logo {
+    font-family: 'Poppins';
+    font-size: 32px;
+    font-weight: 900;
+    color: #636363;
+}
+
+.sidenav-container {
+    width: 500px;
+    height: 100%;
+}
+
+.menu-bar > li {
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.menu-bar > li:hover {
+    opacity: 0.8;
+}

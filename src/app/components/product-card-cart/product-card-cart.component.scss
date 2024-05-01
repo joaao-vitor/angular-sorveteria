@@ -1,0 +1,42 @@
+
+
+.mat-mdc-card-title-group {
+    justify-content: flex-start;
+}
+
+.title-group {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+.card-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.flavors-aditionals {
+    opacity: 0.7;
+    line-height: 1.2;
+    h4 {
+        font-size: 15px;
+        font-weight: 500;
+        margin: 0;
+    }
+    p {
+        margin: 0;
+    }
+}
+.grid-flavors {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.actions-card {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    span {
+        font-size: 16px;
+        font-weight: 500;
+    }
+}

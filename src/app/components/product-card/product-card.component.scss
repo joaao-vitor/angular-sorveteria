@@ -1,0 +1,29 @@
+
+.product-card {
+    .card-content {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 1rem;
+    }
+}
+.product-title {
+    font-family: 'Inter';
+    font-weight: 600;
+    font-size: 20px;
+    margin: 0;
+}
+.product-weight {
+    font-family: 'Inter';
+    font-weight: 400;
+    font-size: 16px;
+    opacity: 0.57;
+}
+.card-img {
+    width: auto;
+    height: 400px;
+}
+.product-img{
+    height: 300px;
+    object-fit: cover;
+    object-position: center;
+}

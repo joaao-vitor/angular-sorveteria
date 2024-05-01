@@ -1,0 +1,77 @@
+{
+  "products": [
+    {
+      "title": "Casquinha Gostosa!",
+      "weight": 200,
+      "measurementUnit": "g",
+      "img": "https://i.imgur.com/UgJaQMU.jpeg",
+      "maxAditionals": 1,
+      "maxFlavors": 2,
+      "price": 5.22,
+      "flavors": [
+        "Chocolate",
+        "Morango"
+      ],
+      "aditionals": [
+        "Chocoball",
+        "Granulado"
+      ],
+      "id": "2"
+    },
+    {
+      "id": "3",
+      "title": "Banana Split",
+      "weight": 400,
+      "measurementUnit": "g",
+      "flavors": [
+        "Chocolate",
+        "Morango"
+      ],
+      "maxFlavors": 3,
+      "aditionals": [
+        "Chocoball",
+        "Granulado"
+      ],
+      "maxAditionals": 3,
+      "img": "https://i.imgur.com/ZNoZ7Qk.png",
+      "price": 5.22
+    },
+    {
+      "id": "57cb",
+      "title": "Paleta Mexicana",
+      "weight": 200,
+      "measurementUnit": "g",
+      "img": "https://cdn0.tudoreceitas.com/pt/posts/0/9/8/paleta_mexicana_de_chocolate_2890_orig.jpg",
+      "maxAditionals": 1,
+      "maxFlavors": 1,
+      "price": 5,
+      "flavors": [
+        "Chocolate",
+        "Morango",
+        "Doce de Leite"
+      ],
+      "aditionals": [
+        "Granulado",
+        "M&Ms"
+      ]
+    },
+    {
+      "id": "960b",
+      "title": "Picolé",
+      "weight": 100,
+      "measurementUnit": "g",
+      "img": "https://cdn.awsli.com.br/600x700/1866/1866581/produto/94713250/6be5602fdb.jpg",
+      "maxAditionals": 0,
+      "maxFlavors": 1,
+      "price": 1.5,
+      "flavors": [
+        "Chocolate",
+        "Morango",
+        "Laranja",
+        "Banana",
+        "Tutti-frutti"
+      ],
+      "aditionals": []
+    }
+  ]
+}

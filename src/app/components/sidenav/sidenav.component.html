@@ -1,0 +1,36 @@
+<div class="sidenav-inside">
+    <mat-nav-list class="nav-list">
+        @for (item of menuItems; track item.title) {
+        <div (click)="close()">
+            <mat-list-item [routerLink]="item.url">
+                <mat-icon matListItemIcon>{{ item.icon }}</mat-icon>
+                <div matListItemTitle>{{ item.title }}</div>
+            </mat-list-item>
+        </div>
+        }
+    </mat-nav-list>
+
+    <mat-nav-list class="nav-list">
+        <mat-list-item [matMenuTriggerFor]="afterMenu">
+            <mat-icon matListItemIcon>account_circle</mat-icon>
+            <div matListItemTitle>meu painel</div>
+            <mat-menu #afterMenu="matMenu" xPosition="after">
+                <app-menu-user-dropdown
+                    (closeEvent)="close()"
+                ></app-menu-user-dropdown>
+            </mat-menu>
+        </mat-list-item>
+        <div (click)="openCart()">
+            <mat-list-item>
+                <mat-icon
+                    matListItemIcon
+                    [matBadge]="countCart()"
+                    [matBadgeHidden]="countCart() === 0"
+                    matBadgeColor="warn"
+                    >shopping_cart</mat-icon
+                >
+                <div matListItemTitle>carrinho</div>
+            </mat-list-item>
+        </div>
+    </mat-nav-list>
+</div>
