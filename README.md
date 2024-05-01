@@ -1,27 +1,73 @@
-# Sorveteria
+# Sorveteria Angular
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.6.
+Este é um projeto de exemplo de uma aplicação web de sorveteria desenvolvida com Angular.
 
-## Development server
+## Deploy
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Este projeto está atualmente implantado em Vercel. Você pode acessá-lo [aqui](https://angular-sorveteria.vercel.app).
 
-## Code scaffolding
+## Pré-requisitos
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Antes de começar, verifique se você atende aos seguintes requisitos:
 
-## Build
+- Você instalou o Node.js e o npm (Node Package Manager).
+- Você instalou o Angular CLI globalmente.
+- - Você configurou uma variável de ambiente chamada `API_URL` que aponta para a URL da sua API.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## Running unit tests
+## Instalando e executando o projeto
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Para instalar e executar o projeto, siga estas etapas:
 
-## Running end-to-end tests
+1. Clone este repositório:
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+```
+git clone https://github.com/joaao-vitor/angular-sorveteria.git
+```
 
-## Further help
+2. Navegue até o diretório do projeto:
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+```
+cd angular-sorveteria
+```
+
+3. Instale as dependências:
+
+```
+npm install
+```
+
+4. Execute o servidor de desenvolvimento:
+
+```
+npm start
+```
+
+O servidor de desenvolvimento será executado em `http://localhost:4200/`.
+
+## Utilizando o JSON Server para simular uma API
+
+Este projeto utiliza o JSON Server para simular uma API REST. O arquivo `db/db.json` contém os dados utilizados pela aplicação.
+
+Para iniciar o servidor JSON, siga estas etapas:
+
+1. Certifique-se de ter o JSON Server instalado globalmente:
+
+```
+npm install -g json-server
+```
+
+2. Navegue até o diretório `db`:
+
+```
+cd db
+```
+
+3. Inicie o servidor JSON:
+
+```
+json-server --watch db.json
+```
+
+O servidor JSON será executado em `http://localhost:3000/`.
+
