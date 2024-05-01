@@ -19,7 +19,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import { ProductService } from '../../services/product.service';
 
 import { firstValueFrom } from 'rxjs';
-import { ActivatedRoute, RouterLink } from '@angular/router';
+import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 @Component({
     selector: 'app-add-product',
     standalone: true,
@@ -51,7 +51,8 @@ export class AddProductComponent implements OnInit {
     constructor(
         private snackBar: MatSnackBar,
         private productService: ProductService,
-        private activatedRoute: ActivatedRoute
+        private activatedRoute: ActivatedRoute,
+        private router: Router
     ) {
         this.productForm = new FormGroup({
             title: new FormControl(),
@@ -134,11 +135,13 @@ export class AddProductComponent implements OnInit {
         }
 
         this.clearForm();
+        if (this.userId) {
+            this.router.navigate(['/add-product'])
+        }
     }
 
     clearForm() {
         this.productForm.reset();
-        this.productForm.clearValidators();
         this.flavors = [];
         this.aditionals = [];
     }
